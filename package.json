@@ -1,0 +1,24 @@
+{
+  "name": "fasm",
+  "version": "0.0.0",
+  "description": "Free assets manager, a tool to keep a reference on your imported art or other assets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vincent/fasm.git"
+  },
+  "keywords": [
+    "game",
+    "assets",
+    "manager"
+  ],
+  "author": "Vincent Lark <vincent.lark@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vincent/fasm/issues"
+  },
+  "homepage": "https://github.com/vincent/fasm"
+}
