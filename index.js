@@ -26,8 +26,12 @@
 
     function credits () {
         _.map(db.data.assets, function (asset) {
-            console.log(' ', util.format('%s from %s', asset.title.green, asset.canonicalLink.white.bold));
+            console.log(util.format('%s by %s\n from %s', asset.title.green, asset.author.green, asset.canonicalLink.white.bold));
         });
+    }
+
+    function addAsset (err, asset) {
+        db.add(asset);
     }
 
     // AssetsCommand
@@ -36,7 +40,6 @@
 
     command
         .version(require('./package').version)
-        .option('-v, --peppers', 'Add peppers')
         .parse(process.argv);
 
     if (! command.args.length) {
@@ -54,7 +57,8 @@
             case 'add':
             case 'install':
                 // if we have an url
-                extractor({ url: next }, db.add.bind(db));
+                extractor({ url: next }, addAsset);
+                i++;
             break;
 
             case 'del':
@@ -67,7 +71,9 @@
                 credits();
             break;
 
-
+            case 'update':
+                credits();
+            break;
         }
         
     }
