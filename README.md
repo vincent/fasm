@@ -3,7 +3,7 @@ fasm
 
 FASM is a simple assets manager, to keep some references about assets you use in your projects.
 
-Intall
+Install
 ==
 ```
 npm install -g fasm
